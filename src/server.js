@@ -20,8 +20,12 @@ class Server{
     }
 
     routes(){
-        
+
+        this.app.use('/api/clientes', require('../public/routes/clientes.routes')) 
+        this.app.use('/api/proveedores', require('../public/routes/proveedores.routes'))  
         this.app.use('/api/pedidos', require('../public/routes/pedidos.routes'))  
+        
+
     }
 
 
